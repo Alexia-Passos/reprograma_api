@@ -15,9 +15,13 @@ exports.getBooks = (req,res) => {
     const al = alunas.find(aluna => aluna.id == id)
     console.log(al)
 
-    const livros = alunas.map(item => {
-        console.log(item.livros)
-    })
-    res.status(200).send()
+    const livrosAlunas = aluna.livrosAlunas
+    const tituloLivros = livros.map (livro => livro.titulo)
+    res.status(200).send(tituloLivros)
+    
+    //const livros = alunas.map(item => {
+    //  console.log(item.livros)
+    //})
+    
 }
    

@@ -7,6 +7,13 @@ const index = require ('./routes/index')
 const alunas = require ('./routes/alunasRoute')
 
 
+app.all("*", function(req,res,next){
+    console.log("foi feita uma req")
+    next()
+})
+   
+
+
 app.use('/',index)
 app.use('/alunas', alunas)
 
